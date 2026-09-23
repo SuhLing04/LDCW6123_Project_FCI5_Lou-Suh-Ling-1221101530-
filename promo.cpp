@@ -8,3 +8,5 @@
 #include <cmath>
 
 using namespace std;
+
+PromoResult applyPromo() {}
