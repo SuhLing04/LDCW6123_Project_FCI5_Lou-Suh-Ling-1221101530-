@@ -9,3 +9,9 @@ struct PromoResult {
     double discount;       // amount taken off (RM)
     std::string message;   // text to show the user
 };
+
+// check a promo code against the food subtotal
+// empty code means "no promo" and is not an error
+PromoResult applyPromo(const std::string& code, double subtotal);
+
+#endif
