@@ -30,3 +30,14 @@ double calculateDeliveryFee(double distanceKm) {
         return FEE_FAR;
     }
 }
+
+double calculateSurcharge(bool isPeakHour, bool isRaining) {
+    double surcharge = 0.0;
+    if (isPeakHour) {
+        surcharge += PEAK_SURCHARGE;
+    }
+    if (isRaining) {
+        surcharge += RAIN_SURCHARGE;
+    }
+    return surcharge;
+}
