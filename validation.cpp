@@ -23,3 +23,11 @@ static string getInputLine(const string& prompt) {
     }
     return line;
 }
+
+int readInt() {}
+
+double readDouble() {}
+
+bool readYesNo() {}
+
+string readLine() {}
