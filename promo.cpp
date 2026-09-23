@@ -6,6 +6,8 @@
 #include "promo.h"
 #include <cctype>
 #include <cmath>
+#include "validation.h"   // for readLine
+#include <iostream>  
 
 using namespace std;
 
