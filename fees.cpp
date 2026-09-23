@@ -49,7 +49,7 @@ double calculateServiceFee(double subtotal) {
 
 int estimateDeliveryTime(double distanceKm, bool isPeakHour, bool isRaining) {
     int minutes = 15;                                   // food preparation
-    minutes += static_cast<int>(distanceKm * 3.0); // about 3 mins per km
+    minutes += static_cast<int>(distanceKm * 3.0+0.5); // about 3 mins per km
     if (isPeakHour) minutes += 10;                      // busy restaurants/ roads
     if (isRaining)  minutes += 5;                       // slower riding
     return minutes;
