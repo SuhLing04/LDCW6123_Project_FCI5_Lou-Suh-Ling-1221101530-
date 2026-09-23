@@ -78,4 +78,6 @@ bool readYesNo(const string& prompt) {
     }
 }
 
-string readLine(const string& prompt) {}
+string readLine(const string& prompt) {
+    return getInputLine(prompt);
+}
