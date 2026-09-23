@@ -35,7 +35,10 @@ PromoResult applyPromo(const string& rawCode, double subtotal) {
 
         if (normalised.empty()) {
             result.message = "No promo code used.";
-        } else if (normalised == "NEWUSER") {
+            return result;
+        }
+
+        if (normalised == "NEWUSER") {
             double discount = round(subtotal * 0.20 * 100.0) / 100.0;
             if (discount > 10.0) {
                 discount = 10.0;
@@ -43,18 +46,21 @@ PromoResult applyPromo(const string& rawCode, double subtotal) {
             result.valid = true;
             result.discount = discount;
             result.message = "NEWUSER applied: 20% off (max RM10).";
+            return result;
         } else if (normalised == "SAVE5") {
             if (subtotal >= 30.0) {
                 result.valid = true;
                 result.discount = 5.0;
                 result.message = "SAVE5 applied: RM5 off.";
+                return result;
             } else {
-                result.message = "SAVE5 needs a minimum food total of RM30.";
+                cout << "  [!] SAVE5 needs a minimum food total of RM30.\n";
             }
         } else {
-            result.message = "Promo code '" + normalised + "' is not valid.";
+            cout << "  [!] Promo code '" << normalised << "' is not valid.\n";
         }
 
-        return result; 
+        // Invalid code: ask again
+        code = readLine("Promo code (press Enter to skip): ");
     }
 }
