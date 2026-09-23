@@ -46,3 +46,11 @@ double calculateServiceFee(double subtotal) {
     // round to the nearest cent so the receipt always adds up exactly
     return round(subtotal * SERVICE_FEE_RATE * 100.0) / 100.0;
 }
+
+int estimateDeliveryTime(double distanceKm, bool isPeakHour, bool isRaining) {
+    int minutes = 15;                                   // food preparation
+    minutes += static_cast<int>(distanceKm * 3.0); // about 3 mins per km
+    if (isPeakHour) minutes += 10;                      // busy restaurants/ roads
+    if (isRaining)  minutes += 5;                       // slower riding
+    return minutes;
+}
