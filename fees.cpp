@@ -20,3 +20,13 @@ static const double FEE_FAR          = 8.00;   // >7 km
 static const double PEAK_SURCHARGE   = 2.00;
 static const double RAIN_SURCHARGE   = 1.50;
 static const double SERVICE_FEE_RATE = 0.05;   // 5%
+
+double calculateDeliveryFee(double distanceKm) {
+    if (distanceKm <= NEAR_LIMIT_KM) {
+        return FEE_NEAR;
+    } else if (distanceKm <= MID_LIMIT_KM) {
+        return FEE_MID;
+    } else {
+        return FEE_FAR;
+    }
+}
