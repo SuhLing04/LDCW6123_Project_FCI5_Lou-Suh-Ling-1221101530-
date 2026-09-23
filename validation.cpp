@@ -30,7 +30,7 @@ int readInt(const string& prompt, int minVal, int maxVal) {
         istringstream iss(line);
         int value;
         char extra;
-        
+
         // MUST read a num AND have nothing left over (so "3.5" or "2abc" are rejected)
         if ((iss >> value) && !(iss >> extra)) {
             if (value >= minVal && value <= maxVal) {
@@ -44,7 +44,25 @@ int readInt(const string& prompt, int minVal, int maxVal) {
     }
 }
 
-double readDouble(const string& prompt, double minVal, double maxVal) {}
+double readDouble(const string& prompt, double minVal, double maxVal) {
+    while (true) {
+        string line = getInputLine(prompt);
+        istringstream iss(line);
+        double value;
+        char extra;
+
+        if ((iss >> value) && !(iss >> extra)) {
+            if (value >= minVal && value <= maxVal) {
+                return value;
+            }
+            cout << "  [!] Please enter a number between "
+                 << minVal << " and " << maxVal << ".\n";
+        } else {
+            cout << "  [!] Invalid input. Please enter a number (e.g. 4.5).\n";
+        }
+    }
+}
+
 
 bool readYesNo(const string& prompt) {}
 
