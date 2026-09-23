@@ -41,3 +41,8 @@ double calculateSurcharge(bool isPeakHour, bool isRaining) {
     }
     return surcharge;
 }
+
+double calculateServiceFee(double subtotal) {
+    // round to the nearest cent so the receipt always adds up exactly
+    return round(subtotal * SERVICE_FEE_RATE * 100.0) / 100.0;
+}
