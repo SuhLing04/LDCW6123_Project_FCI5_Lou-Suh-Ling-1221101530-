@@ -11,3 +11,15 @@
 #include <cstdlib>
 
 using namespace std;
+
+// read one line 
+// if input has ended (e.g. Ctrl+D / Ctrl+Z), exit cleanly
+static string getInputLine(const string& prompt) {
+    cout << prompt;
+    string line;
+    if (!getline(cin, line)) {
+        cout << "\nInput closed. Goodbye!\n";
+        exit(0);
+    }
+    return line;
+}
