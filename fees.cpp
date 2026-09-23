@@ -54,3 +54,5 @@ int estimateDeliveryTime(double distanceKm, bool isPeakHour, bool isRaining) {
     if (isRaining)  minutes += 5;                       // slower riding
     return minutes;
 }
+
+void displayFeeGuide() {}
