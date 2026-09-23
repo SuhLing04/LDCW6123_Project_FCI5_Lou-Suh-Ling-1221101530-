@@ -55,4 +55,14 @@ int estimateDeliveryTime(double distanceKm, bool isPeakHour, bool isRaining) {
     return minutes;
 }
 
-void displayFeeGuide() {}
+void displayFeeGuide() {
+    cout << fixed << setprecision(2);
+    cout << "\n=========== HOW WE CHARGE ===========\n";
+    cout << "Delivery fee:\n";
+    cout << "  Up to " << NEAR_LIMIT_KM << " km ........ RM " << FEE_NEAR << "\n";
+    cout << "  Up to " << MID_LIMIT_KM  << " km ........ RM " << FEE_MID  << "\n";
+    cout << "  Up to " << MAX_DISTANCE_KM << " km ....... RM " << FEE_FAR << "\n";
+    cout << "Peak hour surcharge ..... RM " << PEAK_SURCHARGE << "\n";
+    cout << "Rain surcharge .......... RM " << RAIN_SURCHARGE << "\n";
+    cout << "=====================================\n";
+}
