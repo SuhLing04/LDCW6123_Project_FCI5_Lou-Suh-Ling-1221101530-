@@ -66,6 +66,15 @@ double readDouble(const string& prompt, double minVal, double maxVal) {
 bool readYesNo(const string& prompt) {
     while (true) {
         string line = getInputLine(prompt);
+        string answer;
+        for (size_t i = 0; i < line.size(); i++) {
+            if (!isspace(static_cast<unsigned char>(line[i]))) {
+                answer += static_cast<char>(tolower(static_cast<unsigned char>(line[i])));
+            }
+        }
+        if (answer == "y" || answer == "yes") return true;
+        if (answer == "n" || answer == "no")  return false;
+        cout << "  [!] Please type y or n.\n";
     }
 }
 
