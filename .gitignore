@@ -1,0 +1,5 @@
+# Compiled files - never commit these
+*.exe
+*.o
+delivery
+a.out
