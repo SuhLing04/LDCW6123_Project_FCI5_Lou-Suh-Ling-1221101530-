@@ -63,7 +63,10 @@ double readDouble(const string& prompt, double minVal, double maxVal) {
     }
 }
 
-
-bool readYesNo(const string& prompt) {}
+bool readYesNo(const string& prompt) {
+    while (true) {
+        string line = getInputLine(prompt);
+    }
+}
 
 string readLine(const string& prompt) {}
