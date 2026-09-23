@@ -24,10 +24,14 @@ static string getInputLine(const string& prompt) {
     return line;
 }
 
-int readInt() {}
+int readInt(const string& prompt, int minVal, int maxVal) {
+    while (true) {
+        string line = getInputLine(prompt);
+    }
+}
 
-double readDouble() {}
+double readDouble(const string& prompt, double minVal, double maxVal) {}
 
-bool readYesNo() {}
+bool readYesNo(const string& prompt) {}
 
-string readLine() {}
+string readLine(const string& prompt) {}
