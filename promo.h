@@ -12,6 +12,7 @@ struct PromoResult {
 
 // check a promo code against the food subtotal
 // empty code means "no promo" and is not an error
+// alert user and prompt again if the code is invalid or not applicable
 PromoResult applyPromo(const std::string& code, double subtotal);
 
 #endif
