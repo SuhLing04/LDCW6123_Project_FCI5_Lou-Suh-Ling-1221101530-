@@ -59,9 +59,9 @@ void displayFeeGuide() {
     cout << fixed << setprecision(2);
     cout << "\n=========== HOW WE CHARGE ===========\n";
     cout << "Delivery fee:\n";
-    cout << "  Up to " << NEAR_LIMIT_KM << " km ........ RM " << FEE_NEAR << "\n";
-    cout << "  Up to " << MID_LIMIT_KM  << " km ........ RM " << FEE_MID  << "\n";
-    cout << "  Up to " << MAX_DISTANCE_KM << " km ....... RM " << FEE_FAR << "\n";
+    cout << "  Up to " << NEAR_LIMIT_KM << " km (0.1 - " << NEAR_LIMIT_KM << ") ........ RM " << FEE_NEAR << "\n";
+    cout << "  Up to " << MID_LIMIT_KM << " km (" << NEAR_LIMIT_KM << " - " << MID_LIMIT_KM << ") ........ RM " << FEE_MID << "\n";
+    cout << "  Up to " << MAX_DISTANCE_KM << " km (" << MID_LIMIT_KM << " - " << MAX_DISTANCE_KM << ") ....... RM " << FEE_FAR << "\n";
     cout << "Peak hour surcharge ..... RM " << PEAK_SURCHARGE << "\n";
     cout << "Rain surcharge .......... RM " << RAIN_SURCHARGE << "\n";
         cout << "Peak/rain surcharges go entirely to the rider.\n";
