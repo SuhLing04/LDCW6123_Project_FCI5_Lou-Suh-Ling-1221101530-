@@ -64,6 +64,7 @@ void displayFeeGuide() {
     cout << "  Up to " << MAX_DISTANCE_KM << " km ....... RM " << FEE_FAR << "\n";
     cout << "Peak hour surcharge ..... RM " << PEAK_SURCHARGE << "\n";
     cout << "Rain surcharge .......... RM " << RAIN_SURCHARGE << "\n";
+        cout << "Peak/rain surcharges go entirely to the rider.\n";
     cout << "Service fee ............. " << (SERVICE_FEE_RATE * 100) << "% of food total\n";
     cout << "Promo codes: NEWUSER (20% off, max RM10), SAVE5 (RM5 off, min spend RM30)\n";
     cout << "=====================================\n";
