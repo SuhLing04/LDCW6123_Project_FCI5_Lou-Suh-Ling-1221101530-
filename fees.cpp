@@ -59,7 +59,7 @@ void displayFeeGuide() {
     cout << fixed << setprecision(2);
     cout << "\n=========== HOW WE CHARGE ===========\n";
     cout << "Delivery fee:\n";
-    cout << "  0.1 to " << static_cast<int>(NEAR_LIMIT_KM) << " km ........ RM " << FEE_NEAR << "\n";
+    cout << "  0.1 to " << static_cast<int>(NEAR_LIMIT_KM) << " km ........... RM " << FEE_NEAR << "\n";
     cout << "  Over " << static_cast<int>(NEAR_LIMIT_KM) << " to " << static_cast<int>(MID_LIMIT_KM) << " km ........ RM " << FEE_MID << "\n";
     cout << "  Over " << static_cast<int>(MID_LIMIT_KM) << " to " << static_cast<int>(MAX_DISTANCE_KM) << " km ....... RM " << FEE_FAR << "\n";
     cout << "Peak hour surcharge ..... RM " << PEAK_SURCHARGE << "\n";
