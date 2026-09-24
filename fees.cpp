@@ -66,7 +66,7 @@ void displayFeeGuide() {
     cout << "Rain surcharge .......... RM " << RAIN_SURCHARGE << "\n";
     cout << "Both surcharges apply when peak hour and rain are selected.\n";
     cout << "Simulation policy: peak/rain surcharges are allocated entirely to the rider.\n";
-    cout << "Service fee ............. " << (SERVICE_FEE_RATE * 100) << "% of food subtotal (before discounts)\n";
+    cout << "Service fee ............. " << static_cast<int>(SERVICE_FEE_RATE * 100) << "% of food subtotal (before discounts)\n";
     cout << "Promo codes: NEWUSER (20% off, max RM10), SAVE5 (RM5 off, min spend RM30)\n";
     cout << "=====================================\n";
 }
