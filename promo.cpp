@@ -45,18 +45,18 @@ PromoResult applyPromo(const string& rawCode, double subtotal) {
         }
 
         if (normalised == "NEWUSER") {
-            double discount = round(subtotal * 0.20 * 100.0) / 100.0;
-            if (discount > 10.0) {
-                discount = 10.0;
+            double discount = round(subtotal * NEWUSER_RATE * 100.0) / 100.0;
+            if (discount > NEWUSER_CAP) {
+                discount = NEWUSER_CAP;
             }
             result.valid = true;
             result.discount = discount;
             result.message = "NEWUSER applied: 20% off (max RM10).";
             return result;
         } else if (normalised == "SAVE5") {
-            if (subtotal >= 30.0) {
+            if (subtotal >= SAVE5_MIN_SPEND) {
                 result.valid = true;
-                result.discount = 5.0;
+                result.discount = SAVE5_DISCOUNT;
                 result.message = "SAVE5 applied: RM5 off.";
                 return result;
             } else {
