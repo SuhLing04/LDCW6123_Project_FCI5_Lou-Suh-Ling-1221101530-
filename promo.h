@@ -10,6 +10,10 @@ struct PromoResult {
     std::string message;   // text to show the user
 };
 
+// available promo codes and their rules:
+// - "NEWUSER": 20% off food subtotal (max RM10)
+// - "SAVE5": RM5 off if food subtotal is at least RM30
+
 // check a promo code against the food subtotal
 // empty code means "no promo" and is not an error
 // alert user and prompt again if the code is invalid or not applicable
