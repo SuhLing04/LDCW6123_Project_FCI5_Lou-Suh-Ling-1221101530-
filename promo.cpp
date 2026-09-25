@@ -11,6 +11,12 @@
 
 using namespace std;
 
+// ---- promo settings ----
+static const double NEWUSER_RATE    = 0.20;  // 20% off food subtotal
+static const double NEWUSER_CAP     = 10.00; // max discount for NEWUSER
+static const double SAVE5_MIN_SPEND = 30.00; // minimum food subtotal for SAVE5
+static const double SAVE5_DISCOUNT  = 5.00;  // discount amount for SAVE5
+
 // convert to upper case and removes spaces so "newuser" matches "NEWUSER" etc
 static string normalise(const string& text) {
     string result;
