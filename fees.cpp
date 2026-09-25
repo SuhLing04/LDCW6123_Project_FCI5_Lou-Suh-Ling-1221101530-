@@ -21,6 +21,12 @@ static const double PEAK_SURCHARGE   = 2.00;
 static const double RAIN_SURCHARGE   = 1.50;
 static const double SERVICE_FEE_RATE = 0.05;   // 5%
 
+// add on constant
+static const int PREP_TIME_MINUTES = 15; // food prep time
+static const double MINUTES_PER_KM = 3.0; // about 3 mins per km
+static const int    PEAK_DELAY_MINUTES = 10; // busy restaurants/ roads
+static const int    RAIN_DELAY_MINUTES = 5; // raining delays the rider
+
 double calculateDeliveryFee(double distanceKm) {
     if (distanceKm <= NEAR_LIMIT_KM) {
         return FEE_NEAR;
@@ -48,10 +54,10 @@ double calculateServiceFee(double subtotal) {
 }
 
 int estimateDeliveryTime(double distanceKm, bool isPeakHour, bool isRaining) {
-    int minutes = 15;                                   // food preparation
-    minutes += static_cast<int>(distanceKm * 3.0+0.5); // about 3 mins per km
-    if (isPeakHour) minutes += 10;                      // busy restaurants/ roads
-    if (isRaining)  minutes += 5;                       // slower riding
+    int minutes = PREP_TIME_MINUTES;                                   // food preparation
+    minutes += static_cast<int>(distanceKm * MINUTES_PER_KM +0.5); // about 3 mins per km
+    if (isPeakHour) minutes += PEAK_DELAY_MINUTES ;                      // busy restaurants/ roads
+    if (isRaining)  minutes += RAIN_DELAY_MINUTES;                       // slower riding
     return minutes;
 }
 
