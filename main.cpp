@@ -67,6 +67,15 @@ static void addToCart(vector<OrderItem>& cart, const MenuItem& item, int quantit
     cart.push_back(newItem);
 }
 
+// Adds up price * quantity for every item currently in the cart.
+static double calculateSubtotal(const vector<OrderItem>& cart) {
+    double subtotal = 0.0;
+    for (size_t i = 0; i < cart.size(); i++) {
+        subtotal += cart[i].price * cart[i].quantity;
+    }
+    return subtotal;
+}
+
 // Runs one full order from start to receipt.
 static void placeOrder() {
     vector<OrderItem> cart;
@@ -103,10 +112,7 @@ static void placeOrder() {
 
     // ---- Step 3: calculate everything ----
     Charges charges;
-    charges.subtotal = 0.0;
-    for (size_t i = 0; i < cart.size(); i++) {
-        charges.subtotal += cart[i].price * cart[i].quantity;
-    }
+    charges.subtotal = calculateSubtotal(cart);
 
     charges.deliveryFee = calculateDeliveryFee(distance);
     charges.surcharge   = calculateSurcharge(isPeak, isRain);
