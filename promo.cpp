@@ -3,6 +3,10 @@
 // Winston model link: promo codes and discounts are how platforms pushed
 // DIFFUSION (getting many users to adopt the service quickly)
 
+// MODULE: promo
+// PURPOSE: Validates and applies promo codes to a food order,
+// prompting the user again if the code is invalid or ineligible
+
 #include "promo.h"
 #include <cctype>
 #include <cmath>
