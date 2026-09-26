@@ -11,6 +11,13 @@
 // isRaining: bool, true if raining during delivery
 // subtotal: double, food subtotal before any discounts
 
+// OUTPUTS:
+// calculateDeliveryFee() -> delivery fee in RM based on distance tier
+// calculateSurcharge() -> extra charge in RM for peak hour and/or rain
+// calculateServiceFee() -> 5% of food subtotal, rounded to nearest cent
+// estimateDeliveryTime() -> estimated delivery time in mins
+// displayFeeGuide() -> displays the full fee rules to the user
+
 const double MAX_DISTANCE_KM = 20.0;   // we do not deliver beyond this
 
 // delivery fee based on distance (tiered)
