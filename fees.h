@@ -2,6 +2,15 @@
 #ifndef FEES_H
 #define FEES_H
 
+// MODULE: fees
+// PURPOSE: Calculates all delivery-related charges and estimated time
+
+// INPUTS:
+// distanceKm: double, distance in km (pre-validated within 0.1 - 20)
+// isPeakHour: bool, true if order is during lunch/dinner rush
+// isRaining: bool, true if raining during delivery
+// subtotal: double, food subtotal before any discounts
+
 const double MAX_DISTANCE_KM = 20.0;   // we do not deliver beyond this
 
 // delivery fee based on distance (tiered)
