@@ -30,6 +30,9 @@ void displayReceipt(const vector<OrderItem>& items,
         printLine("Peak/rain surcharge", charges.surcharge);
     }
     printLine("Service fee (5%)", charges.serviceFee);
+
+    // Passing a negative value to printLine reuses the same right-aligned format,
+    // so thee discount shows as "-3.80" instead of writing a separate print path.
     if (charges.discount > 0.0) {
         printLine("Promo discount", -charges.discount);
     }
