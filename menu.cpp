@@ -19,7 +19,7 @@ void displayMenu() {
     cout << "\n------------- MENU -------------\n";
     for (int i = 0; i < MENU_SIZE; i++) {
         cout << "  " << (i + 1) << ". "
-             << left << setw(22) << MENU[i].name
+             << left << setw(24) << MENU[i].name
              << "RM " << fixed << setprecision(2) << MENU[i].price << "\n";
     }
     cout << "--------------------------------\n";
