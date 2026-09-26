@@ -3,10 +3,6 @@
 // Winston model link: promo codes and discounts are how platforms pushed
 // DIFFUSION (getting many users to adopt the service quickly)
 
-// MODULE: promo
-// PURPOSE: Validates and applies promo codes to a food order,
-// prompting the user again if the code is invalid or ineligible
-
 // DESIGN LOGIC (step by step):
 //   1. Normalise input (uppercase, strip spaces) so "newuser" as "NEWUSER"
 //   2. If code is empty, skip promo and return immediately
@@ -15,16 +11,6 @@
 //   5. If code is unrecognised or ineligible, alert user and re-prompt
 //   6. Repeat until a valid code is entered or the user skips
  
-// INPUTS:
-// rawCode: std::string, the promo code typed by the user (may be empty)
-// subtotal: double, food subtotal before any discounts
-//
-// OUTPUTS:
-// PromoResult struct containing:
-//   valid: bool, true if a valid code was applied
-//   discount: double, amount taken off in RM (0.0 if no code)
-//   message: std::string, text shown to the user
-
 #include "promo.h"
 #include <cctype>
 #include <cmath>
