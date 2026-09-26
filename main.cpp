@@ -83,8 +83,8 @@ static void placeOrder() {
     vector<OrderItem> cart;
 
     // ---- Step 1: build the cart ----
-    bool choosingFood = true;
-    while (choosingFood) {
+    bool isBuildingCart = true;
+    while (isBuildingCart) {
         displayMenu();
         int choice = readInt("Choose an item (1-" + to_string(MENU_SIZE) +
                              ", or 0 to finish): ", 0, MENU_SIZE);
@@ -94,7 +94,7 @@ static void placeOrder() {
                 cout << "Your cart is empty. Order cancelled.\n";
                 return;
             }
-            choosingFood = false;
+            isBuildingCart = false;
         } else {
             MenuItem item = getMenuItem(choice);
             int quantity = readInt("How many " + item.name + "? (1-" +
