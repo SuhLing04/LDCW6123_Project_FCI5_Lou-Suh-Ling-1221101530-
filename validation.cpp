@@ -4,6 +4,12 @@
 // If the user types letters, "cin >> number" puts cin into a fail state and the
 // program can loop forever. Reading a full line and parsing it ourselves avoids that.
 
+// MODULE PROVIDES:
+//   readInt()    : whole number within a range
+//   readDouble() : decimal number within a range
+//   readYesNo()  : y/yes or n/no (case-insensitive, spaces ignored)
+//   readLine()   : any free text (used for promo codes)
+
 #include "validation.h"
 #include <iostream>
 #include <sstream>
