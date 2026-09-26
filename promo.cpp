@@ -3,10 +3,6 @@
 // Winston model link: promo codes and discounts are how platforms pushed
 // DIFFUSION (getting many users to adopt the service quickly)
 
-// MODULE: promo
-// PURPOSE: Validates and applies promo codes to a food order,
-// prompting the user again if the code is invalid or ineligible
-
 // DESIGN LOGIC (step by step):
 //   1. Normalise input (uppercase, strip spaces) so "newuser" as "NEWUSER"
 //   2. If code is empty, skip promo and return immediately

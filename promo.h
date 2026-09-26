@@ -2,6 +2,20 @@
 #ifndef PROMO_H
 #define PROMO_H
 
+// MODULE: promo
+// PURPOSE: Validates and applies promo codes to a food order,
+// prompting the user again if the code is invalid or ineligible
+
+// INPUTS:
+// rawCode: std::string, the promo code typed by the user (may be empty)
+// subtotal: double, food subtotal before any discounts
+
+// OUTPUTS:
+// PromoResult struct containing:
+//   valid: bool, true if a valid code was applied
+//   discount: double, amount taken off in RM (0.0 if no code)
+//   message: std::string, text shown to the user
+
 #include <string>
 
 struct PromoResult {

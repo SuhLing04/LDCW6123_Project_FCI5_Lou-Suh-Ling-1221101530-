@@ -2,6 +2,21 @@
 #ifndef VALIDATION_H
 #define VALIDATION_H
 
+// MODULE: validation
+// PURPOSE: Provides safe input reading helpers that prevent infinite
+// loops and reject invalid input before it reaches other modules
+
+// INPUTS:
+//   prompt: std::string, message shown to the user
+//   minVal: minimum accepted value (readInt, readDouble)
+//   maxVal: maximum accepted value (readInt, readDouble)
+
+// OUTPUTS:
+//   readInt() -> int, validated whole num
+//   readDouble() -> double, validated decimal num
+//   readYesNo() -> bool, true for yes, false for no
+//   readLine() -> std::string, any text the user typed
+
 #include <string>
 
 // keep asking until the user enters a whole number between minVal and maxVal
