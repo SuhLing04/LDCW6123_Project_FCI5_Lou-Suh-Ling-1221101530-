@@ -149,6 +149,9 @@ int main() {
         showMainMenu();
         int option = readInt("Choose an option (1-4): ", 1, 4);
 
+
+        // Menu option 4 sets running = false instead of calling exit(), so any
+        // cleanup code added later would still run before the program closes.
         switch (option) {
             case 1:
                 placeOrder();
