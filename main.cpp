@@ -113,6 +113,8 @@ static void placeOrder() {
     string promoCode = readLine("Promo code (press Enter to skip): ");
 
     // ---- Step 3: calculate everything ----
+    // Order matters: subtotal must be known before service fee and promo discount,
+    // since both are percentages/conditions based on the food subtotal.
     Charges charges;
     charges.subtotal = calculateSubtotal(cart);
 
