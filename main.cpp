@@ -52,6 +52,8 @@ static void showMainMenu() {
     cout << "----------------------------------------\n";
 }
 
+// Prevents duplicate rows in the receipt: e.g. ordering "2x Nasi Lemak" then
+// "1x Nasi Lemak" later shows as one line of "3x Nasi Lemak", not two lines.
 // Adds an item to the cart. If the same item is already there, increase the quantity.
 static void addToCart(vector<OrderItem>& cart, const MenuItem& item, int quantity) {
     for (size_t i = 0; i < cart.size(); i++) {
