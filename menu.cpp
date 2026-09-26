@@ -1,4 +1,4 @@
-// menu.cpp - Food menu (owner: C1)
+// menu.cpp - Food menu 
 #include "menu.h"
 #include <iostream>
 #include <iomanip>

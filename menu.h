@@ -1,4 +1,4 @@
-// menu.h - Food menu (owner: C1)
+// menu.h - Food menu 
 #ifndef MENU_H
 #define MENU_H
 
@@ -14,7 +14,8 @@ struct MenuItem {
 // Prints the numbered menu to the screen.
 void displayMenu();
 
-// Returns the menu item for a choice from 1 to MENU_SIZE.
+// Returns the menu item for a
+// choice from 1 to MENU_SIZE.
 MenuItem getMenuItem(int choice);
 
 #endif
