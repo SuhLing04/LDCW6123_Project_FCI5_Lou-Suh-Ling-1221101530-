@@ -1,6 +1,5 @@
 // =====================================================================
 // Food Delivery Order Calculator
-// Course : LDCW6123 Fundamentals of Digital Competence for Programmer
 // Part 2 : Interactive C++ Program
 //
 // Purpose:
@@ -9,21 +8,8 @@
 //   program calculates fees, surcharges, discounts, total price and
 //   estimated delivery time.
 //
-// Link to Part 1 (Winston Model of food delivery platforms):
-//   - Menu + order building ....... PROTOTYPE/INVENTION: app combines restaurant
-//                                   listing, ordering and payment in one place
-//   - Distance-based delivery fee . DIFFUSION: how the service is priced to scale
-//   - Peak / rain surcharge ....... SUPERVENING SOCIAL NECESSITY: busy urban life
-//                                   and bad weather create demand for delivery
-//   - Promo codes ................. DIFFUSION: discounts to attract new users
-//   - Fee guide + transparency .... SUPPRESSION OF RADICAL POTENTIAL: society
-//                                   (regulators, restaurants, riders) pushes for
-//                                   fair and clear fees
-//
 // Inputs : menu choice, quantity, distance (km), peak hour, rain, promo code
-// Outputs: itemised receipt, total price, estimated delivery time
-//
-// Team   : C1 - main.cpp, menu, receipt   |   C2 - fees, promo, validation
+// Outputs: itemized receipt, total price, estimated delivery time
 // =====================================================================
 
 #include <iostream>
