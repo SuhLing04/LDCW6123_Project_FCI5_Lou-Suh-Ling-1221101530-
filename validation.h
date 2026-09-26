@@ -11,6 +11,12 @@
 //   minVal: minimum accepted value (readInt, readDouble)
 //   maxVal: maximum accepted value (readInt, readDouble)
 
+// OUTPUTS:
+//   readInt() -> int, validated whole num
+//   readDouble() -> double, validated decimal num
+//   readYesNo() -> bool, true for yes, false for no
+//   readLine() -> std::string, any text the user typed
+
 #include <string>
 
 // keep asking until the user enters a whole number between minVal and maxVal
