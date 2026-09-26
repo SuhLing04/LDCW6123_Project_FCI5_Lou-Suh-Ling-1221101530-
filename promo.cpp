@@ -7,6 +7,14 @@
 // PURPOSE: Validates and applies promo codes to a food order,
 // prompting the user again if the code is invalid or ineligible
 
+// DESIGN LOGIC (step by step):
+//   1. Normalise input (uppercase, strip spaces) so "newuser" as "NEWUSER"
+//   2. If code is empty, skip promo and return immediately
+//   3. If code is NEWUSER, apply 20% off the food subtotal, capped at RM10
+//   4. If code is SAVE5, apply RM5 off only if subtotal >= RM30
+//   5. If code is unrecognised or ineligible, alert user and re-prompt
+//   6. Repeat until a valid code is entered or the user skips
+ 
 #include "promo.h"
 #include <cctype>
 #include <cmath>
