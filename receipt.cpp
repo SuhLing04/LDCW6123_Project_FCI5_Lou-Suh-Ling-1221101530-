@@ -19,9 +19,14 @@ void displayReceipt(const vector<OrderItem>& items,
     cout << "==========================================\n";
 
     for (size_t i = 0; i < items.size(); i++) {
-        string label = to_string(items[i].quantity) + " x " + items[i].name;
-        printLine(label, items[i].price * items[i].quantity);
+    if (items[i].quantity <= 0) {
+        continue;  // safety check: skip any accidental zero-quantity rows
     }
+
+    string label = to_string(items[i].quantity) + " x " + items[i].name;
+    printLine(label, items[i].price * items[i].quantity);
+    }
+
 
     cout << "------------------------------------------\n";
     printLine("Food subtotal", charges.subtotal);
@@ -32,7 +37,7 @@ void displayReceipt(const vector<OrderItem>& items,
     printLine("Service fee (5%)", charges.serviceFee);
 
     // Passing a negative value to printLine reuses the same right-aligned format,
-    // so thee discount shows as "-3.80" instead of writing a separate print path.
+    // so the discount shows as "-3.80" instead of writing a separate print path.
     if (charges.discount > 0.0) {
         printLine("Promo discount", -charges.discount);
     }
