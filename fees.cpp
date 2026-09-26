@@ -14,7 +14,7 @@ using namespace std;
 // ---- fee settings ----
 static const double NEAR_LIMIT_KM    = 3.0;
 static const double MID_LIMIT_KM     = 7.0;
-static const double FEE_NEAR         = 3.00;   // 0 - 3 km
+static const double FEE_NEAR         = 3.00;   // 0.1 - 3 km
 static const double FEE_MID          = 5.00;   // >3 - 7 km
 static const double FEE_FAR          = 8.00;   // >7 km
 static const double PEAK_SURCHARGE   = 2.00;

@@ -7,7 +7,7 @@
 // prompting the user again if the code is invalid or ineligible
 
 // INPUTS:
-// rawCode: std::string, the promo code typed by the user (may be empty)
+// code: std::string, the promo code typed by the user (may be empty)
 // subtotal: double, food subtotal before any discounts
 
 // OUTPUTS:
