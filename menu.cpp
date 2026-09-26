@@ -19,12 +19,14 @@ void displayMenu() {
     cout << "\n------------- MENU -------------\n";
     for (int i = 0; i < MENU_SIZE; i++) {
         cout << "  " << (i + 1) << ". "
-             << left << setw(22) << MENU[i].name
+             << left << setw(24) << MENU[i].name
              << "RM " << fixed << setprecision(2) << MENU[i].price << "\n";
     }
     cout << "--------------------------------\n";
 }
 
+// Menu is shown to users as 1-6, but the array is indexed from 0,
+// so choice-1 converts the user's number to the correct array position.
 MenuItem getMenuItem(int choice) {
     return MENU[choice - 1];
 }

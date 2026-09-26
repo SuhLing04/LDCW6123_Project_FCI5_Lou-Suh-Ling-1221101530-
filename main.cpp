@@ -52,6 +52,8 @@ static void showMainMenu() {
     cout << "----------------------------------------\n";
 }
 
+// Prevents duplicate rows in the receipt: e.g. ordering "2x Nasi Lemak" then
+// "1x Nasi Lemak" later shows as one line of "3x Nasi Lemak", not two lines.
 // Adds an item to the cart. If the same item is already there, increase the quantity.
 static void addToCart(vector<OrderItem>& cart, const MenuItem& item, int quantity) {
     for (size_t i = 0; i < cart.size(); i++) {
@@ -67,13 +69,22 @@ static void addToCart(vector<OrderItem>& cart, const MenuItem& item, int quantit
     cart.push_back(newItem);
 }
 
+// Adds up price * quantity for every item currently in the cart.
+static double calculateSubtotal(const vector<OrderItem>& cart) {
+    double subtotal = 0.0;
+    for (size_t i = 0; i < cart.size(); i++) {
+        subtotal += cart[i].price * cart[i].quantity;
+    }
+    return subtotal;
+}
+
 // Runs one full order from start to receipt.
 static void placeOrder() {
     vector<OrderItem> cart;
 
     // ---- Step 1: build the cart ----
-    bool choosingFood = true;
-    while (choosingFood) {
+    bool isBuildingCart = true;
+    while (isBuildingCart) {
         displayMenu();
         int choice = readInt("Choose an item (1-" + to_string(MENU_SIZE) +
                              ", or 0 to finish): ", 0, MENU_SIZE);
@@ -83,7 +94,7 @@ static void placeOrder() {
                 cout << "Your cart is empty. Order cancelled.\n";
                 return;
             }
-            choosingFood = false;
+            isBuildingCart = false;
         } else {
             MenuItem item = getMenuItem(choice);
             int quantity = readInt("How many " + item.name + "? (1-" +
@@ -102,11 +113,10 @@ static void placeOrder() {
     string promoCode = readLine("Promo code (press Enter to skip): ");
 
     // ---- Step 3: calculate everything ----
+    // Order matters: subtotal must be known before service fee and promo discount,
+    // since both are percentages/conditions based on the food subtotal.
     Charges charges;
-    charges.subtotal = 0.0;
-    for (size_t i = 0; i < cart.size(); i++) {
-        charges.subtotal += cart[i].price * cart[i].quantity;
-    }
+    charges.subtotal = calculateSubtotal(cart);
 
     charges.deliveryFee = calculateDeliveryFee(distance);
     charges.surcharge   = calculateSurcharge(isPeak, isRain);
@@ -139,6 +149,9 @@ int main() {
         showMainMenu();
         int option = readInt("Choose an option (1-4): ", 1, 4);
 
+
+        // Menu option 4 sets running = false instead of calling exit(), so any
+        // cleanup code added later would still run before the program closes.
         switch (option) {
             case 1:
                 placeOrder();
