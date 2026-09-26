@@ -25,6 +25,8 @@ void displayMenu() {
     cout << "--------------------------------\n";
 }
 
+// Menu is shown to users as 1-6, but the array is indexed from 0,
+// so choice-1 converts the user's number to the correct array position.
 MenuItem getMenuItem(int choice) {
     return MENU[choice - 1];
 }
