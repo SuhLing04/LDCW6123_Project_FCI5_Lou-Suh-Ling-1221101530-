@@ -65,14 +65,32 @@ void displayFeeGuide() {
     cout << fixed << setprecision(2);
     cout << "\n=========== HOW WE CHARGE ===========\n";
     cout << "Delivery fee:\n";
-    cout << "  0.1 to " << static_cast<int>(NEAR_LIMIT_KM) << " km ........... RM " << FEE_NEAR << "\n";
-    cout << "  Over " << static_cast<int>(NEAR_LIMIT_KM) << " to " << static_cast<int>(MID_LIMIT_KM) << " km ........ RM " << FEE_MID << "\n";
-    cout << "  Over " << static_cast<int>(MID_LIMIT_KM) << " to " << static_cast<int>(MAX_DISTANCE_KM) << " km ....... RM " << FEE_FAR << "\n";
+
+    cout << "  0.1 to " << static_cast<int>(NEAR_LIMIT_KM)
+         << " km ........... RM " << FEE_NEAR << "\n";
+
+    cout << "  Over " << static_cast<int>(NEAR_LIMIT_KM)
+         << " to " << static_cast<int>(MID_LIMIT_KM)
+         << " km ........ RM " << FEE_MID << "\n";
+
+    cout << "  Over " << static_cast<int>(MID_LIMIT_KM)
+         << " to " << static_cast<int>(MAX_DISTANCE_KM)
+         << " km ....... RM " << FEE_FAR << "\n";
+
     cout << "Peak hour surcharge ..... RM " << PEAK_SURCHARGE << "\n";
     cout << "Rain surcharge .......... RM " << RAIN_SURCHARGE << "\n";
+
     cout << "Both surcharges apply when peak hour and rain are selected.\n";
-    cout << "Simulation policy: peak/rain surcharges are allocated entirely to the rider.\n";
-    cout << "Service fee ............. " << static_cast<int>(SERVICE_FEE_RATE * 100) << "% of food subtotal (before discounts)\n";
-    cout << "Promo codes: NEWUSER (20% off, max RM10), SAVE5 (RM5 off, min spend RM30)\n";
+
+    cout << "Simulation policy: peak/rain surcharges are allocated "
+         << "entirely to the rider.\n";
+
+    cout << "Service fee ............. "
+         << static_cast<int>(SERVICE_FEE_RATE * 100)
+         << "% of food subtotal (before discounts)\n";
+
+    cout << "Promo codes: NEWUSER (20% off, max RM10), "
+         << "SAVE5 (RM5 off, min spend RM30)\n";
+
     cout << "=====================================\n";
 }
