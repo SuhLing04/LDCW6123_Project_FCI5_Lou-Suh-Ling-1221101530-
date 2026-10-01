@@ -1,7 +1,9 @@
 # Food Delivery Order Calculator
 
 **Course:** LDCW6123 Fundamentals of Digital Competence for Programmer
+
 **Part 2:** Interactive C++ Program
+
 **Related technology (Part 1):** Food delivery platforms, analysed using Brian Winston's model of technological innovation
 
 ## Purpose
