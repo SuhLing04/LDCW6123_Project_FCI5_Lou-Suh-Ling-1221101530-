@@ -1,10 +1,8 @@
 # Food Delivery Order Calculator
 
-**Course:** LDCW6123 Fundamentals of Digital Competence for Programmer
+**LDCW6123 Project Part 2:** Interactive C++ Program
 
-**Part 2:** Interactive C++ Program
-
-**Related technology (Part 1):** Food delivery platforms, analysed using Brian Winston's model of technological innovation
+**Related technology to Part 1:** Food delivery platforms, analysed using Brian Winston's model of technological innovation
 
 ## Purpose
 This program simulates the core ordering process of a food delivery platform such as GrabFood, foodpanda, or ShopeeFood.
