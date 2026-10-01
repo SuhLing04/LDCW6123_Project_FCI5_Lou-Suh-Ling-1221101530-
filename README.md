@@ -17,15 +17,6 @@ and estimated delivery time.
 | **Logic** | `switch` for the main menu, `if / else if` for fee tiers and promo codes, loops for the cart and repeated orders, input validation for every input |
 | **Outputs** | Itemised receipt, total price, estimated delivery time, order confirmation |
 
-## Link to Winston model (Part 1)
-
-| Program feature | Winston stage |
-|---|---|
-| Menu and order building | Prototype / Invention: listing, ordering and payment in one app |
-| Distance-based delivery fee | Diffusion: pricing that lets the service scale |
-| Peak and rain surcharge | Supervening social necessity: busy urban life and bad weather drive demand |
-| Promo codes | Diffusion: discounts to attract new users |
-| Fee guide and clear receipt | Suppression of radical potential: pressure from regulators, restaurants and riders for fair, transparent fees |
 
 ## Files
 
@@ -51,4 +42,11 @@ On Windows Command Prompt, run `delivery` instead of `./delivery`.
 - `SAVE5`: RM5 off, food total must be at least RM30
 
 ## Team
-(Add member names and roles here)
+| Member | Role |
+|---|---|
+| C1 - Lou Suh Ling | Part 2 (C++ Code) - Main menu, food menu, receipt |
+| C2 - Yong Yi Wen | Part 2 (C++ Code) - Fees, promo codes, input validation |
+| C3 - Ong Zi Xuan | Part 1 - Winston's model Innovation Life Cycle Poster |
+| C4 - Wong Zhan Hui | Part 1 - Winston's model Innovation Life Cycle Poster |
+| C5 - Zoey Chu | Part 1 - Winston's model Innovation Life Cycle Poster |
+| C6 - Lee Wen Le | Part 1 - Winston's model Innovation Life Cycle Poster |
